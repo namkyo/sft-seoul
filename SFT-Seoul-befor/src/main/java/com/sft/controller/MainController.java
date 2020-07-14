@@ -12,12 +12,15 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.sft.domin.PageMaker;
+import com.sft.domin.SearchCriteria;
 import com.sft.dto.Paging;
 import com.sft.dto.Press;
 import com.sft.dto.Revenue;
@@ -93,34 +96,20 @@ public class MainController {
 
 		// 소통게시판 조회
 		if ("Press".equals(url)) {
-			Paging paing=new Paging();
-			int pageNum=1;
-			int pageSize=10;
-			try{
-				pageNum=Integer.parseInt(req.getParameter("pageNum"));
-			}catch (NumberFormatException e) {
-				log.info("페이지미지정");
+			SearchCriteria cri=new SearchCriteria();
+			PageMaker pageMaker = new PageMaker();
+			try {
+				cri.setPage(Integer.parseInt(req.getParameter("pageNum")));
+			} catch (NumberFormatException e) {
+				log.info("==초기접속==");
 			}
-			int v_pageSize=(pageNum-1)*pageSize;
-			int v_pageOffset=(pageSize-1);
-			
-			paing.setPageSize(v_pageSize);
-			paing.setPageOffset(v_pageOffset);
-			
-			int selectTotalCount=pressService.selectTotalCount();
-			
-			int startNum=pageNum;
-			int endNum=selectTotalCount/pageSize;
-
-			if((endNum-startNum)<10) {
-				endNum=startNum+9;
-			}
-			model.addAttribute("startNum", startNum);
-			model.addAttribute("endNum", endNum);
-			
-			model.addAttribute("pressList", pressService.selectList(paing));
+			pageMaker.setCri(cri);
+		    pageMaker.setTotalCount(pressService.selectTotalCount());
+			log.info("cri : " + cri.toString());
+			log.info("pageMaker : " + pageMaker.toString());
+			model.addAttribute("pressList", pressService.selectList(cri));
+		    model.addAttribute("pageMaker", pageMaker);
 			model.addAttribute("msg", String.valueOf(req.getParameter("msg")));
-			
 			
 		}else if ("Press_detail".equals(url)) {
 			int num = Integer.parseInt(String.valueOf(req.getParameter("num")));
@@ -133,21 +122,29 @@ public class MainController {
 		}
 		
 
-		//수인인증 조회
+		//투자문의 조회
 		else if("Revenue".equals(url)) {
-			model.addAttribute("revenueList", revenueService.selectList());
+			SearchCriteria cri=new SearchCriteria();
+			PageMaker pageMaker = new PageMaker();
+			try {
+				cri.setPage(Integer.parseInt(req.getParameter("pageNum")));
+			} catch (NumberFormatException e) {
+				log.info("==초기접속==");
+			}
+			pageMaker.setCri(cri);
+		    pageMaker.setTotalCount(pressService.selectTotalCount());
+			log.info("cri : " + cri.toString());
+			log.info("pageMaker : " + pageMaker.toString());
+			model.addAttribute("revenueList", revenueService.selectList(cri));
+		    model.addAttribute("pageMaker", pageMaker);
 			model.addAttribute("msg", String.valueOf(req.getParameter("msg")));
 		}else if ("Revenue_detail".equals(url)) {
 			int num = Integer.parseInt(String.valueOf(req.getParameter("num")));
 			model.addAttribute("revenueDetail", revenueService.selectOne(num));
-			model.addAttribute("revenueDetailFiles", revenueService.selectOneFile(num));
 		}else if ("Revenue_delete".equals(url)) {
 			Revenue revenue = new Revenue();
 			revenue.setNum(Integer.parseInt(String.valueOf(req.getParameter("num"))));
 			revenueService.delete(revenue);
-			Revenue_files revenue_files = new Revenue_files();
-			revenue_files.setUpper_num(Integer.parseInt(String.valueOf(req.getParameter("num"))));
-			revenueService.delete_file(revenue_files);
 			page = "redirect:sft?page=Revenue&SFT=admin&msg=success";
 		}
 		
@@ -202,6 +199,23 @@ public class MainController {
 			press.setNum(Integer.parseInt(String.valueOf(req.getParameter("num"))));
 			pressService.update(press);
 			page = "redirect:sft?page=Press&SFT=admin&msg=success";
+		}else if ("Revenue_insert".equals(url)) {
+			Revenue revenue = new Revenue();
+			revenue.setTitle(String.valueOf(req.getParameter("title")));
+			revenue.setTxusrnm(String.valueOf(req.getParameter("txusrnm")));
+			revenue.setReg_date(Common.getthisTime());
+			revenue.setContent(String.valueOf(req.getParameter("content")));
+			revenueService.insert(revenue);
+			page = "redirect:sft?page=Revenue&SFT=admin&msg=success";
+		}else if ("Revenue_update".equals(url)) {
+			Revenue revenue = new Revenue();
+			revenue.setTitle(String.valueOf(req.getParameter("title")));
+			revenue.setTxusrnm(String.valueOf(req.getParameter("txusrnm")));
+			revenue.setReg_date(Common.getthisTime());
+			revenue.setContent(String.valueOf(req.getParameter("content")));
+			revenue.setNum(Integer.parseInt(String.valueOf(req.getParameter("num"))));
+			revenueService.update(revenue);
+			page = "redirect:sft?page=Revenue&SFT=admin&msg=success";
 		}
 		return page;
 	}
@@ -222,9 +236,9 @@ public class MainController {
 			List<MultipartFile> list = files.get("in_file");
 			int index = 0;
 
-			int num = revenueService.seq();
+			//int num = revenueService.seq();
 			String reg_date = Common.getthisDay();
-			log.info("num : "+num);
+			//log.info("num : "+num);
 			for (MultipartFile mfile : list) {
 				long fileSize = mfile.getSize();
 				log.info("mfile.getSize() : " + mfile.getSize());
@@ -232,18 +246,18 @@ public class MainController {
 					// 파일업로드후 적재
 					String filename = saveFile(req, mfile);
 					Revenue_files revenue_files = new Revenue_files();
-					revenue_files.setUpper_num(num);
+					//revenue_files.setUpper_num(num);
 					revenue_files.setNum(++index);
 					revenue_files.setFile_path(filename);
 					revenue_files.setReg_date(reg_date);
 					log.info("revenue_files : "+revenue_files.toString());
-					revenueService.insert_files(revenue_files);
+					//revenueService.insert_files(revenue_files);
 				}
 			}
 
 			if (index > 0) {
 				Revenue revenue = new Revenue();
-				revenue.setNum(num);
+			//revenue.setNum(num);
 				revenue.setTitle(String.valueOf(mreq.getParameter("title")));
 				revenue.setTxusrnm(String.valueOf(mreq.getParameter("txusrnm")));
 				revenue.setReg_date(Common.getthisTime());

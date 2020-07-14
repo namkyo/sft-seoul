@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.sft.domin.SearchCriteria;
 import com.sft.dto.Paging;
 import com.sft.dto.Press;
 
@@ -19,8 +20,8 @@ public class PressDAO {
 
 	private String namespace = "press";
 
-	public List<Press> selectList(Paging paing) {
-		return sqlSessionl.selectList(namespace + ".selectList",paing);
+	public List<Press> selectList(SearchCriteria cri) {
+		return sqlSessionl.selectList(namespace + ".selectList",cri);
 	}
 	
 	public int selectTotalCount() {

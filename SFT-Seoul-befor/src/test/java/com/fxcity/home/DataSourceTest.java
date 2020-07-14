@@ -12,6 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.sft.dao.PressDAO;
 import com.sft.dto.Paging;
 import com.sft.dto.Press;
+import com.sft.dto.Revenue;
 import com.sft.service.PressService;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"file:src/main/webapp/WEB-INF/spring/root-context.xml"})
@@ -78,7 +79,7 @@ public class DataSourceTest {
 	public void insert() {
 		Press press=new Press();
 
-		for(int i=101;i<200;i++) {
+		for(int i=0;i<100;i++) {
 			try {
 				press.setTitle(i+"번째글");
 				press.setTxusrnm("작성자");
@@ -93,6 +94,26 @@ public class DataSourceTest {
 		
 		
 	}
+	@Test
+	public void insert2() {
+		Revenue press=new Revenue();
+
+		for(int i=0;i<100;i++) {
+			try {
+				press.setTitle(i+"번째글");
+				press.setTxusrnm("작성자");
+				press.setReg_date("2019-09-09");
+				press.setContent(i+"번째게시글");
+				System.out.println(sqlSessionl.insert(namespace2+".create", press));
+			} catch (Exception e) {
+				System.out.println(e);
+				break;
+			}
+		}
+		
+		
+	}
+	
 	
 	@Test
 	public void update() {

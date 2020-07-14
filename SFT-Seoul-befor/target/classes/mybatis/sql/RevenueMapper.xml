@@ -7,59 +7,36 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="revenue">
-	<select id="selectList" resultType="RevenueList">
+	<select id="selectList" resultType="Revenue" parameterType="SearchCriteria">
  <![CDATA[
-	SELECT 
-		a.num AS num
-		,a.title AS title
-		,a.txusrnm AS txusrnm
-		,LEFT(a.reg_date,10) AS reg_date
-		,a.content 
-		,b.file_path AS file_path
-		FROM SFT_REVENUE a
-		INNER JOIN 
-		SFT_REVENUE_FILES b
-		ON a.num=b.upper_num
-		AND b.num=1
-		ORDER BY a.num DESC
+		SELECT 
+		num
+		,title
+		,txusrnm
+		,LEFT(reg_date,10)
+		,content 
+		FROM SFT_REVENUE Z 
+		ORDER BY Z.NUM DESC 
+		LIMIT #{pageStart},#{perPageNum}
  ]]>
 	</select>
 
 	<select id="selectOne" resultType="Revenue" parameterType="Revenue">
 	
  <![CDATA[
-		SELECT 
-		num
-		,title
-		,txusrnm
-		,reg_date
-		,content 
-		FROM SFT_REVENUE WHERE num=#{num,jdbcType=INTEGER}
+		SELECT num,title,txusrnm,reg_date,content FROM SFT_REVENUE WHERE num=#{num,jdbcType=INTEGER}
  ]]>
 	</select>
 	
-		<select id="selectOne_files" resultType="Revenue_files" parameterType="Revenue_files">
+	<select id="selectTotalCount" resultType="Integer" >
 	
  <![CDATA[
-		SELECT 
-		a.num
-		,a.file_path
-		,a.reg_date
-		FROM SFT_REVENUE_FILES a 
-		WHERE a.upper_num=#{upper_num,jdbcType=INTEGER}
-		order by a.num
+		SELECT COUNT(*) FROM SFT_REVENUE
  ]]>
 	</select>
+	
 
-		<select id="seq" resultType="Integer">
-	
- <![CDATA[
-SELECT (IFNULL(MAX(NUM),0)+1) FROM SFT_REVENUE;
- ]]>
-	</select>
-	
-	
-	<insert id="create" parameterType="Revenue">
+	<insert id="create" parameterType="Revenue" >
 		INSERT INTO SFT_REVENUE
 		(
 		num
@@ -70,7 +47,7 @@ SELECT (IFNULL(MAX(NUM),0)+1) FROM SFT_REVENUE;
 		)
 		VALUES
 		(
-		#{num,jdbcType=INTEGER}
+		(SELECT (IFNULL(MAX(NUM),0)+1) FROM SFT_REVENUE AS num )
 		,#{title,jdbcType=VARCHAR}
 		,#{txusrnm,jdbcType=VARCHAR}
 		,#{reg_date,jdbcType=VARCHAR}
@@ -78,25 +55,8 @@ SELECT (IFNULL(MAX(NUM),0)+1) FROM SFT_REVENUE;
 		)
 	</insert>
 	
-	<insert id="create_file" parameterType="Revenue_files">
-		INSERT INTO SFT_REVENUE_FILES
-		(
-		upper_num
-		,num
-		,file_path
-		,reg_date
-		)
-		VALUES
-		(
-		#{upper_num,jdbcType=INTEGER}
-		,#{num,jdbcType=INTEGER}
-		,#{file_path,jdbcType=VARCHAR}
-		,#{reg_date,jdbcType=VARCHAR}
-		)
-	</insert>
 	
-	
-	<update id="update" parameterType="Revenue">
+	<update id="update" parameterType="Revenue" >
 		UPDATE SFT_REVENUE SET
 		title=#{title,jdbcType=VARCHAR},
 		txusrnm=#{txusrnm,jdbcType=VARCHAR},
@@ -110,12 +70,6 @@ SELECT (IFNULL(MAX(NUM),0)+1) FROM SFT_REVENUE;
 		DELETE FROM SFT_REVENUE 
 		WHERE 
 		num = #{num,jdbcType=INTEGER}
-	</delete>
-	
-	<delete id="delete_file" parameterType="Revenue">
-		DELETE FROM SFT_REVENUE_FILES 
-		WHERE 
-		upper_num = #{upper_num,jdbcType=INTEGER}
 	</delete>
 	
 	

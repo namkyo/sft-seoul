@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.sft.dao.PressDAO;
-import com.sft.dto.Paging;
+import com.sft.domin.SearchCriteria;
 import com.sft.dto.Press;
 
 @Service
@@ -14,8 +14,8 @@ public class PressService {
 	@Autowired
 	private PressDAO pressDAO;
 
-	public List<Press> selectList(Paging paing) {
-		return pressDAO.selectList(paing);
+	public List<Press> selectList(SearchCriteria cri) {
+		return pressDAO.selectList(cri);
 	}
 	
 	public int selectTotalCount() {

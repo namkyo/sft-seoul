@@ -52,45 +52,27 @@
 <div class="titleWrap inner"
 	style="background-color: #40bbe4; width: 100%; padding-top: 10px; padding-bottom: 10px; text-align: center;">
 	<h1 class="title" style="color: #fff;">SFT - 서울지사</h1>
-	<p class="subTitle" style="color: #fff;">동/영/상 가/이/드</p>
+	<!-- <p class="subTitle" style="color: #fff;">동/영/상 가/이/드</p> -->
 </div>
 
 <div class="quickMenu inner"  style="font-family: 'font02';">
 
-<!-- 
 	<ul>
-		<li><div>
-				<h3 style="letter-spacing: 5px;">회원가입편</h3>
-			</div> 
-			<iframe width="100%" height="250" src="https://www.youtube.com/embed/F_PzKiM-fz8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</li>
-		<li>
+		<li style="width: 36%;">
 			<div>
-				<h3 style="letter-spacing: 5px;">투자가이드편</h3>
-			</div> 
-			<iframe width="100%" height="250" src="https://www.youtube.com/embed/YTW96neyYCE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		</li>
-		<li>
-			<div>
-				<h2 style="letter-spacing: 5px;">매매가이드편</h2>
-			</div><iframe width="100%" height="250" src="https://www.youtube.com/embed/AmpJUxH-FoA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		</li>
-		<li>
-			<div>
-				<h2 style="letter-spacing: 5px;">유튜버</h2>
-			</div> <iframe width="100%" height="250"
-				src="https://www.youtube.com/embed/RfpGUX9Egm4" frameborder="0"
-				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen></iframe>
+				<h2 style="letter-spacing: 5px;">SFT 소개</h2>
+			</div> <iframe
+				src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FSFT5123%2Fvideos%2F1582130101941412%2F&show_text=0&width=560"
+			  width="100%" height="250" style="border: none; overflow: hidden"
+				scrolling="no" frameborder="0" allowTransparency="true"
+				allowFullScreen="true"></iframe>
 		</li>
 
 	</ul>
-	 -->
 </div>
 
 
-
-<!--  
+ 
 <div class="titleWrap inner" style="background-color: f3f3f5; width:100%; padding-top: 10px; padding-bottom: 10px; text-align: center;">
           <h1 class="title" style="color: #000;">관련페이지</h1>
         </div>
@@ -98,27 +80,26 @@
 
  <div class="quickMenu inner">
 	<ul>
-		<li><a href="https://blog.naver.com/john7367" target="_blank"> <span></span>
+		<li><a href="https://blog.naver.com/PostList.nhn?blogId=wod865&categoryNo=7&skinType=&skinId=&from=menu&userSelectMenu=true" target="_blank"> <span></span>
 				<div>
 					<h2>블로그</h2>
 				</div>
 		</a></li>
-		<li><a
-			href="https://www.instagram.com/fxcity_jongro/?hl=ko" target="_blank">
+		<li><a  onclick="alert('준비중'); return false;" >
 				<span></span>
 				<div>
 					<h2>인스타그램</h2>
 				</div>
 		</a></li>
 		<li><a
-			href="https://facebook.com/GSBM-종로점-108794157443831" target="_blank">
+			href="https://www.facebook.com/SFT5123" target="_blank">
 				<span></span>
 				<div>
 					<h2>페이스북 </h2>
 				</div>
 		</a></li>
 		<li><a
-			href="https://www.youtube.com/channel/UCJccXDx_q4Ptt68n0ALXuHg?view_as=subscriber" target="_blank">
+			onclick="alert('준비중'); return false;" >
 				<span></span>
 				<div>
 					<h2>YOUTUBE</h2>
@@ -126,7 +107,6 @@
 		</a></li>
 	</ul>
 </div>
--->
       <!-- end: .quickMenu -->      
 
 

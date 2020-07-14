@@ -22,6 +22,8 @@
 <meta property="og:title" content="SFT-서울지사 | 몽키레젼드 | 드래곤스타 | p2p투자">
 <meta property="og:description" content="-p2p사이트 -몽키레젼드 -드래곤스타 -p2p투자 -sft -저금리로 필요자금 지원 아파트 담보대출, 사업운영자금 지원 구매론 무료상담">
 <meta property="og:url" content="http://sft-network.co.kr/">
+<meta property="og:image" content="/resources/image/kakaoImage.png" />
+
 <meta name="naver-site-verification" content="dbc4b88c1859be2cf5a02fe2adf51c0977941b0e" />
 
 

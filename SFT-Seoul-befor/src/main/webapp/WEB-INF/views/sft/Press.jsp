@@ -46,7 +46,7 @@
 		<!-- 리스트구간 -->
 		<ul class="boardList ntcList">
 			<!-- 리스트 -->
-			<c:forEach var="pressList" items="${pressList}" varStatus="status">
+			<c:forEach var="pressList" items="${pressList}">
 				<li><span>${pressList.num}</span>
 					<div>
 						<h1>
@@ -70,13 +70,14 @@
 
 	</div>
 	
+	
+	
 	<!-- 리스트하단 -->
 				<div id="ContentPlaceHolder1_up_morelist" style="position:relative;">
 					
 					<div id="div_morelist" style="display:none"> <b><a href='/news/news?searchWord=&curPage=1'> 1 </a></b><a href='/news/news?searchWord=&curPage=2'> 2 </a><a href='/news/news?searchWord=&curPage=3'> 3 </a><a href='/news/news?searchWord=&curPage=4'> 4 </a><a href='/news/news?searchWord=&curPage=5'> 5 </a><a href='/news/news?searchWord=&curPage=6'> 6 </a><a href='/news/news?searchWord=&curPage=7'> 7 </a><a href='/news/news?searchWord=&curPage=8'> 8 </a><a class="next1" href='/news/news?searchWord=&curPage=2'> 다음 </a></div>
 					
 					<div class="listMore"> 
-						<a id="ContentPlaceHolder1_lb_more" href="">더보기<span></span></a>
 						<p onClick="location.href='boardTy1a_write.asp';">글쓰기</p>
 					</div>
 
@@ -84,21 +85,40 @@
 .paging{text-align: center;}
 .paging a{padding-right:2%;}
 </style>
-					<div class="pagination paging">
+		<div class="pagination paging">
 			<!-- paging -->
-			
-			<c:forEach var="index" begin="${startNum}" end="${endNum}" >
-				<b><a href='/sft?page=Press&pageNum=${index}'> ${index} </a></b>
+
+
+			<c:if test="${pageMaker.prev}">
+				<b><a class="next1"
+					href="/sft?page=Press&pageNum=${pageMaker.startPage-1 }">&laquo;</a></b>
+			</c:if>
+
+			<c:forEach begin="${pageMaker.startPage }"
+				end="${pageMaker.endPage }" var="idx">
+				<c:if test="${pageMaker.cri.page == idx}">
+				<strong>
+				</c:if>
+				<li>
+					<a href="/sft?page=Press&pageNum=${idx}">${idx}</a>
+				</li>
+				<c:if test="${pageMaker.cri.page == idx}">
+				</strongs>
+				</c:if>
 			</c:forEach>
-			
-				<a class="next1"
-				href='/sft?page=Press&pageNum=2'> 다음 </a>
+
+			<c:if test="${pageMaker.next && pageMaker.endPage > 0}">
+				<b><a class="next1"
+					href="/sft?page=Press&pageNum=${pageMaker.endPage+1} ">&raquo;</a>
+				</b>
+			</c:if>
+
 			<!-- // paging -->
 		</div>
 
-					
 
-				</div><!-- 리스트하단 --> 
+
+	</div><!-- 리스트하단 --> 
 
 
 </div>

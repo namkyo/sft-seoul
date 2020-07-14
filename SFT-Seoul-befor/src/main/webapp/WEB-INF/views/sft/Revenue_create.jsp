@@ -17,11 +17,11 @@
 </script>
 <div class="titleWrap"
 		style="background-color: #40bbe4; width: 100%; padding-top: 10px; padding-bottom: 10px; text-align: center;">
-		<h1 class="title" style="color: #fff;">수익 올리기</h1>
+		<h1 class="title" style="color: #fff;">SFT 투자문의</h1>
 	</div>
  <div class="inner">
-	<form class="clud_frm" name="clud_frm"  id="clud_frm" method="post" action="/file?page=Revenue_insert" enctype="multipart/form-data">
-		<h1 class="contTitle">SFT 서울지사 만의 수익인증</h1>
+	<form class="clud_frm" name="clud_frm"  id="clud_frm" method="post" action="/sft?page=Revenue_insert">
+		<h1 class="contTitle">SFT 투자문의</h1>
         <div class="formWrap">
           <div class="sect">
             <h3>정보 입력</h3>
@@ -36,24 +36,6 @@
               <div class="ipw_100">
                 <textarea rows="10" cols="20" id="content"  name="content"  placeholder="내용을 입력해 주세요."></textarea>
               </div>
-              
-              
-              <div id="btn_plus">
-                <input type="file" name="in_file" placeholder="파일" /><br>
-                <input type="file" name="in_file" placeholder="파일" /><br>
-                <input type="file" name="in_file" placeholder="파일" /><br>
-                <input type="file" name="in_file" placeholder="파일" /><br>
-                <input type="file" name="in_file" placeholder="파일" /><br>
-                <input type="file" name="in_file" placeholder="파일" /><br>
-                <input type="file" name="in_file" placeholder="파일" /><br>
-                <input type="file" name="in_file" placeholder="파일" /><br>
-                <input type="file" name="in_file" placeholder="파일" /><br>
-                <input type="file" name="in_file" placeholder="파일" /><br>
-                <input type="file" name="in_file" placeholder="파일" /><br>
-                <input type="file" name="in_file" placeholder="파일" /><br>
-                <input type="file" name="in_file" placeholder="파일" /><br>
-              </div>
-              
             </div>
           </div>
           <div class="btnWrap"> 
