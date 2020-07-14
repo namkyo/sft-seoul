@@ -58,7 +58,7 @@
 <div class="quickMenu inner"  style="font-family: 'font02';">
 
 	<ul>
-		<li style="width: 36%;">
+		<li>
 			<div>
 				<h2 style="letter-spacing: 5px;">SFT 소개</h2>
 			</div> <iframe
