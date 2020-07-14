@@ -1,0 +1,53 @@
+/**
+ * 기본 CSS
+ * <pre>
+ * <b>History:</b>
+ *    최초 작성자, 1.0, 2019-01-09
+ * </pre>
+ *
+ * @author 전보민
+ * @version 1.0
+ * @see    None
+ */
+ 
+@import url(http://fonts.googleapis.com/earlyaccess/notosanssc.css);
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v4/NanumGothic-Regular.eot);
+  src: url(http://themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v4/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(http://themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v4/NanumGothic-Regular.woff2) format('woff2'),
+       url(http://themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v4/NanumGothic-Regular.woff) format('woff'),
+       url(http://themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v4/NanumGothic-Regular.ttf) format('truetype');
+}
+
+* { margin:0; padding:0; outline:none;box-sizing:border-box; }
+body, html {width: 100%;background-color: #393939;font-family: 'NanumGothic', sans-serif;font-size: 16px;}
+html { overflow-y: scroll; }
+h1,h2,h3,h4,h5,h6{color:#fff;}
+a {color: #FFF;text-decoration: none;}
+ul, ol {list-style: none;}
+table{border-collapse: collapse;}
+th{font-family: 'NanumGothic', sans-serif;color:#fff;}
+td{font-size:0.85rem;font-family: 'NanumGothic', sans-serif;}
+input, select{vertical-align:middle;padding:0 10px;line-height:20px;height: 24px;}
+button{border:none;}
+dt{font-family: 'NanumGothic', sans-serif;color:#fff;}
+dd{font-family: 'NanumGothic', sans-serif;color:#fff;}
+span{font-family: 'NanumGothic', sans-serif;color:#fff;}
+strong{font-family: 'NanumGothic', sans-serif;color:#fff;}
+textarea{font-family: 'NanumGothic', sans-serif;color:#fff;}
+
+@media all and (max-width: 1300px) {
+	body, html {font-size: 14px;}		
+}
+@media all and (max-width: 1024px) {
+	body, html {font-size: 13px;}		
+}
+@media all and (max-width: 768px) {
+	body, html {font-size: 12px;}		
+}
+@media all and (max-width: 414px) {
+	body, html {font-size: 10px;}		
+}

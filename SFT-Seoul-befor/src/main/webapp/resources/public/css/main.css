@@ -1,0 +1,234 @@
+@charset "utf-8";
+
+/*mainVisual*/
+.mainVisual{position:relative;height :100%;top: 1px;}
+.mainVisual ul li{width:100%;background:#415176;overflow:hidden;}
+.mainVisual ul li br{display:block;}
+.mainVisual ul li a{display:block;position:relative;height:600px;color:#fff;}
+.mainVisual ul li .obj{position:absolute;top:44%;right:10%;width:250px;z-index:50;}
+.mainVisual ul li.mainVisual02 .obj, .mainVisual ul li.mainVisual03 .obj{top:47%;right:6%;}
+.mainVisual ul li .bg_m{position:absolute;bottom:0;  z-index:10; top: 0px; width:500%; height:100%; color:#ffffff;}
+.mainVisual ul li .bg2_m{position:absolute;bottom:0; z-index:10; top: 0px; width:500%;  left: -150px;opacity:0.6; color:#ffffff; width: 100%;}
+.mainVisual ul li .bg{ display:none;}
+.mainVisual ul li .bg2{ display:none;}
+.mainVisual ul li .mainVisualTxt{position:absolute;top:61px;left:0;z-index:100;}
+.mainVisual ul li .mainVisualTxt h3{font-size:40px;font-weight:normal; word-break:keep-all;line-height:30px;}
+.mainVisual ul li .mainVisualTxt h1{margin:10px 0 13px;font-size:30px;line-height:30px;letter-spacing:-2px;word-break:keep-all;}
+.mainVisual ul li .mainVisualTxt div{display:none;}
+.mainVisual ul li .mainVisualTxt dd{ display:inline-block; border:#fff 1px solid; padding:5px 20px; margin-top:10px; }
+.mainVisual .bx-controls-direction a{display:none;}
+.mainVisual .bx-pager{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);}
+.mainVisual .bx-pager div{float:left;margin-right:7px;text-indent:-9999px;}
+.mainVisual .bx-pager div a{display:block;width:10px;height:10px;border-radius:50%;border:1px solid #fff;}
+.mainVisual .bx-pager div .active{background:#fff;}
+
+/*quickMenu*/
+.quickMenu.inner{width:100%;}
+.quickMenu ul li{display:inline-block;position:relative;width:100%;padding:0 20px;box-sizing:border-box;vertical-align:top;border-bottom:1px solid #e5e5e5;}
+.quickMenu ul li a{display:block;height:100px;padding:20px 0;box-sizing:border-box;}
+.quickMenu ul li span{display:inline-block;width:20%;margin-right:10px;vertical-align:middle;}
+.quickMenu ul li span:after{content:"";display:block;border-radius:50%;background:rgba(128,135,153,0.66) url('/resources/image/snsLogo03.png') no-repeat center/auto 30px;transition:all 0.3s;}
+.quickMenu ul li:nth-child(2) span:after{background-image:url('/resources/image/snsLogo05.png');}
+.quickMenu ul li:nth-child(3) span:after{background-image:url('/resources/image/snsLogo02.png');}
+.quickMenu ul li:last-child span:after{background-image:url('/resources/image/snsLogo04.png');}
+.quickMenu ul li div{display:inline-block;width:100%;vertical-align:middle; }
+.quickMenu ul li h2{font-size:18px;}
+.quickMenu ul li p{margin-top:5px;font-size:13px;}
+.quickMenu ul li p br{display:none;}
+.quickMenu ul li:hover span:after{background-color:#005BAC;background-image:url('/resources/image/snsLogo03.png');}
+.quickMenu ul li:nth-child(2):hover span:after{background-image:url('/resources/image/snsLogo05.png');}
+.quickMenu ul li:nth-child(3):hover span:after{background-image:url('/resources/image/snsLogo02.png');}
+.quickMenu ul li:last-child:hover span:after{background-image:url('/resources/image/snsLogo04.png');}
+
+/*mainWeberPdt*/
+.mainWeberPdt{position:relative;margin-bottom:30px;padding:45px 0 15%;background:#f3f3f5;}
+.mainWeberPdt .titleWrap{margin-bottom:20px;}
+.mainWeberPdt .titleWrap .title span{font-size:23px;}
+.mainWeberPdt ul li{text-align:center;}
+.mainWeberPdt ul li a{display:block;}
+.mainWeberPdt ul li img{display:inline-block;width:80%;}
+.mainWeberPdt ul li .mainEtnTxt{display:inline-block;width:80%;margin-top:-10px;padding:25px 10px 35px;box-sizing:border-box;background:linear-gradient(to top right, #03afb9, #188cc7, #1070ba);color:#fff;}
+.mainWeberPdt ul li .mainEtnTxt h1{font-family:'NanumGothic','나눔고딕','dotum';  margin-bottom:20px; margin:10px 0 20px; font-size:16px; letter-spacing:0;}
+.mainWeberPdt ul li .mainEtnTxt h2{ display:none; font-size:17px;line-height:30px;}
+.mainWeberPdt ul li .mainEtnTxt p{font-size:16px;}
+.mainWeberPdt ul li .mainEtnTxt dd{font-size:16px;}
+.mainWeberPdt ul li .mainEtnTxt > span{display:inline-block;width:100%;margin-top:10px;padding:5px 0 10px;background:url('/resources/public/images/common/moreArr.png') no-repeat center bottom;font-size:13px;}
+.mainWeberPdt .bx-viewport{padding-top:0;}
+.mainWeberPdt .bx-controls-direction a{display:block;position:absolute;top:50%;width:40px;height:80px;z-index:100;text-indent:-9999px;margin-top:-15px;}
+.mainWeberPdt .bx-prev{left:1%;background:url('/resources/public/images/main/mainWeberPdtCtrLBig.png') no-repeat center/25px auto;}
+.mainWeberPdt .bx-next{right:1%;background:url('/resources/public/images/main/mainWeberPdtCtrRBig.png') no-repeat center/25px auto;}
+.mainWeberPdt .bx-pager{position:absolute;bottom:5%;left:50%;transform:translateX(-50%);z-index:100;}
+.mainWeberPdt .bx-pager div{float:left;margin-right:7px;text-indent:-9999px;}
+.mainWeberPdt .bx-pager div:last-child{margin-right:0;}
+.mainWeberPdt .bx-pager div a{display:block;width:10px;height:10px;border-radius:50%;border:1px solid #4C4948;}
+.mainWeberPdt .bx-pager div .active{border-color:#005BAC;background:#005BAC;}
+
+/*mainWeberInfo*/
+.mainWeberInfo ul{margin-top:30px;}
+.mainWeberInfo ul li{position:relative;display:inline-block;width:100%;margin-bottom:10px;box-sizing:border-box;background:#f8fafc url('/resources/public/images/main/quickB01.png') no-repeat 95% center/auto 35px;border:1px solid #e5e5e5;}
+.mainWeberInfo ul li a{display:block;padding:20px;box-sizing:border-box;}
+.mainWeberInfo ul li h1{margin-bottom:5px;font-size:16px;font-weight:bold;line-height:24px;}
+.mainWeberInfo ul li p{ width:90%;}
+.mainWeberInfo ul li p br{display:none;}
+.mainWeberInfo ul li span{display:none;}
+.mainWeberInfo ul li:nth-child(2){background-image:url('/resources/public/images/main/quickB02.png');}
+.mainWeberInfo ul li:nth-child(3){background-image:url('/resources/public/images/main/quickB03.png');}
+.mainWeberInfo ul li:nth-child(4){background-image:url('/resources/public/images/main/quickB04.png');}
+.mainWeberInfo ul li:last-child{background-image:url('/resources/public/images/main/quickB05.png');}
+.mainWeberInfo ul li:hover{border:1px solid #005BAC;background-color:#fff;}
+
+/*mainBoard - mainNotice*/
+.mainBoard .mainNotice{width:100%;margin-bottom:30px; margin-top:30px;}
+.mainBoard .mainNotice .title{margin-bottom:20px;}
+.mainBoard .mainNotice .title a{display:block;float:right;width:46px;height:46px;margin:-8px -9px 0 0;background:url('/resources/public/images/common/morePlusB.png') no-repeat center/19px auto;text-indent:-9999px;}
+.mainBoard .mainNotice .title a:hover{background:#005BAC url('/resources/public/images/common/morePlusW.png') no-repeat center/19px auto;}
+.mainBoard .mainNotice div{border-top:2px solid #ccc;border-bottom:1px solid #e5e5e5;}
+.mainBoard .mainNotice div a{display:block;padding:20px;box-sizing:border-box;}
+.mainBoard .mainNotice div:last-child{border-top:0;}
+.mainBoard .mainNotice div h2{margin-bottom:20px;font-size:16px;line-height:26px;}
+.mainBoard .mainNotice div h2:hover{text-decoration:underline;}
+.mainBoard .mainNotice div h2 .new{width:15px;height:15px;margin-top:-5px;font-style:normal;line-height:15px;}
+.mainBoard .mainNotice div p{display:none;}
+
+/*mainBoard - mainEvent*/
+.mainBoard .mainEvent{position:relative;width:100%;height:285px;background: url('/resources/public/images/main/bg_counsel.png') no-repeat right top #c4daf1;text-align:center;}
+.mainBoard .mainEvent a{display:block;height:100%;}
+.mainBoard .mainEvent img{display:inline-block;margin-top:140px;}
+.mainBoard .mainEvent div{position:absolute;top:30px;left:25px;text-align:left; letter-spacing:0;}
+.mainBoard .mainEvent div h1{margin-bottom:15px;font-size:21px;}
+.mainBoard .mainEvent div p{}
+.mainBoard .mainEvent div p br{display:block;}
+.mainBoard .mainEvent div p strong{font-size:18px;color:#026cba;}
+
+/* 2019.09.09 customer 롤링배너 추가 */
+.relation_wrap{width:100%;background:#fff;  border-bottom:1px solid #d9d9d9;}
+.relation_wrap2{width:100%; margin:0 auto; padding:0 24px; position:Relative;}
+.relation_wrap2 h3{text-align:center; padding-top:50px;}
+.relation{width:100%; height:60px; margin:0 auto; overflow:hidden; position:relative; }
+.relation .motion_box{overflow:hidden;  height:60px; position:absolute; left:0; top:0;}
+.relation ul{overflow:hidden; float:left;}
+.relation ul li{float:left; text-align:center; padding:0 20px; padding:0 20px; position:relative; height:60px; display:table;}
+.relation ul li a{display:table-cell; width:100%; height:60px; vertical-align:middle;}
+.relation_prev{position:absolute; left:25px; height:60px; width:28px; line-height:100%; padding-top:23px; text-align:center; cursor:pointer;}
+.relation_next{position:absolute; right:25px; height:60px; width:28px; line-height:100%; padding-top:23px; text-align:center; cursor:pointer;}
+
+
+/* 2019.09.09 상담 */
+.talkfloat {position:fixed; bottom:0; right:0; width:300px; z-index: 9999}
+.talkfloat .talk_header {height:34px; background:#d0d3de; position: relative}
+.talkfloat .talk_header .toplink {width:34px; height: 34px; background:#5d56a3; display:table; text-align:center; border-radius: 0;
+position:absolute; top:0; left: 0}
+.talkfloat .talk_header .toplink > span {display:table-cell; vertical-align: middle; color: #fff; font-size:.75em}
+.talkfloat .talk_header .toplink > span:before {content:""; display:block; width:10px; height: 6px;
+background:url('/resources/images/common/topW.png') no-repeat 0 0; background-size:100%; margin:5px auto 0}
+.talkfloat .talk_header .titset {padding-left:55px; line-height: 34px}
+.talkfloat .talk_header .titset .hd3 {font-size:1em; display:inline-block}
+.talkfloat .talk_header .titset .call {margin-left:12px}
+.talkfloat .talk_header .titset .call:before {content:""; display:inline-block; width:15px; height: 15px;
+	background:url('/resources/images/board/reply.png') no-repeat 0 0; background-size:100%; vertical-align: middle; margin:0 6px 3px 0}
+.talkfloat .talk_header .ctr {width:34px; height: 34px; background:#5d56a3; position:absolute; top:0; right:0; border-radius: 0;; text-align: center;
+display:table}
+.talkfloat .talk_header .ctr > span {display: block;vertical-align: middle;}
+.talkfloat .talk_header .ctr > span:before {content:""; display:block; top:10px; width: 10px; height: 34px; background:url('/resources/images/common/closeW.png') no-repeat 0 0;
+background-size:10px auto; margin:0 auto}
+.talkfloat .talk_header .btn {z-index: 100}
+.talkfloat .talkbody {height:0; background:#f2f2f2; transition:all .5s ease}
+.talkfloat .talkbody .talk_iconset {text-align:center; padding-top:30px}
+.talkfloat .talkbody .talk_iconset .btn {display:inline-block}
+.talkfloat .talkbody .talk_iconset .btn .ico.ty1 {display:block; width:55px; height:55px; background:url('/resources/image/snsLogo11.png') no-repeat 0 0;
+background-size:auto 55px; margin:0 auto}
+.talkfloat .talkbody .talk_iconset .btn .ico.ty2 {display:block; width:55px; height:55px; background:url('/resources/image/snsLogo10.png');
+background-size:auto 55px; margin:0 auto}
+.talkfloat .talkbody .talk_iconset .btn .ico.ty3 {display:block; width:55px; height:55px; background:url('/resources/image/snsLogo09.png');
+background-size:auto 55px; margin:0 auto}
+.talkfloat .talkbody .talk_iconset .btn + .btn {margin-left:20px}
+.talkfloat .talkbody .talk_iconset .btn .ico.ty1 {background-position:0 0}
+.talkfloat .talkbody .talk_iconset .btn .ico.ty2 {background-position:-55px 0}
+.talkfloat .talkbody .talk_iconset .btn .ico.ty3 {background-position:-110px 0}
+.talkfloat .talkbody .talk_iconset .btn .ico + .stxt {margin-top:13px}
+.talkfloat .talkbody .talk_iconset .btn .stxt {display:inline-block; font-size:.875em}
+
+.talkfloat.on .talk_header .ctr > span:before {background-position:0 -6px}
+.talkfloat.on .talkbody {height:142px}
+
+
+@media (max-width: 768px) {
+	.talkfloat {width:70px; bottom:10px; right:10px}
+	.talkfloat:before {content:""; display:block; position:fixed; top:0; left:0; background:rgba(0,0,0,0); width:100%; height:100%;
+visibility: hidden; transition:all .5s ease}
+	.talkfloat .talk_header {height:70px; border-radius: 50%; overflow: hidden; background:none}
+	.talkfloat .talk_header .toplink {display:none}
+	.talkfloat .talk_header .titset {display:none}
+	.talkfloat .talk_header .ctr {    width: 233px; height: 150px;     top: -56px; background:url('/resources/image/snsLogo09.png');}
+	.talkfloat.on.moff .talk_header .ctr > span:before,
+	.talkfloat.mon .talk_header .ctr > span:before {width:30px; height: 30px; background:url('/resources/images/common/closeW.png') no-repeat 0 0;
+background-size:100%}
+
+	.talkfloat .talkbody {background:none}
+	.talkfloat .talkbody .talk_iconset .btn .stxt {display:none}
+
+
+	.talkfloat .talkbody {position: absolute; top: -50px; background: none; visibility: hidden; opacity: 0}
+	.talkfloat .talkbody .talk_iconset {padding:0}
+	.talkfloat .talkbody .talk_iconset .btn + .btn {margin:10px 0 0 0}
+
+	.talkfloat.mon .talkbody  {top: -200px; height: inherit; visibility: visible; opacity: 1}
+	.talkfloat.mon:before {content:""; display:block; position:fixed; top:0; left:0; background:rgba(0,0,0,.7); width:100%; height:100%;
+visibility: visible;}
+	
+	.talkfloat .talk_header .ctr {display:table}
+	.talkfloat.on.moff .talkbody {height: 0; top: 0; visibility: hidden; opacity: 0}
+	.talkfloat.on.moff:before {display:none}
+}
+
+@font-face {
+  font-family: font01; 
+  src: url("/resources/font/font01.ttf");
+}
+@font-face {
+  font-family: font02; 
+  src: url("/resources/font/font02.ttf");
+}
+@font-face {
+  font-family: font03; 
+  src: url("/resources/font/BMJUA_ttf.ttf");
+}
+@font-face {
+  font-family: font04; 
+  src: url("/resources/font/BMDOHYEON_ttf.ttf");
+}
+@media ( min-width : 768px) {
+	
+	.namBanner_left {
+		position: fixed;
+		left: 5px;
+		top: 350px;
+		background: #fae100;
+		z-index: 3;
+		width: 120px;
+		text-align: center;
+	}
+	.namBanner_right {
+		position: fixed;
+		right: 5px;
+		top: 350px;
+		background: #fae100;
+		z-index: 3;
+		width: 120px;
+		text-align: center;
+	}
+	
+}
+
+@media ( max-width : 768px) {
+	
+	.namBanner_left {
+		width: 0 !important;
+		display: none !important;
+	}
+	.namBanner_right {
+		width: 0 !important;
+		display: none !important;
+	}
+	
+}

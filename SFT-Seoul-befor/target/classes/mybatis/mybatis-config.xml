@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.sft.dto.Press" alias="Press"/>
+		<typeAlias type="com.sft.dto.Paging" alias="Paging"/>
+		<typeAlias type="com.sft.dto.Revenue" alias="Revenue"/>
+		<typeAlias type="com.sft.dto.Revenue_files" alias="Revenue_files"/>
+		<typeAlias type="com.sft.dto.RevenueList" alias="RevenueList"/>
+	</typeAliases>
+</configuration>

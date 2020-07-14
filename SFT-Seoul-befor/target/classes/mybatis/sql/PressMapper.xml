@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="press">
+	<select id="selectList" resultType="Press">
+ <![CDATA[
+		SELECT 
+		num
+		,title
+		,txusrnm
+		,LEFT(reg_date,10)
+		,content 
+		FROM SFT_PRESS Z 
+		ORDER BY Z.NUM DESC 
+		LIMIT #{pageSize,jdbcType=INTEGER},#{pageOffset,jdbcType=INTEGER};
+ ]]>
+	</select>
+
+	<select id="selectOne" resultType="Press" parameterType="Press">
+	
+ <![CDATA[
+		SELECT num,title,txusrnm,reg_date,content FROM SFT_PRESS WHERE num=#{num,jdbcType=INTEGER}
+ ]]>
+	</select>
+	
+	<select id="selectTotalCount" resultType="Integer" >
+	
+ <![CDATA[
+		SELECT COUNT(*) FROM SFT_PRESS
+ ]]>
+	</select>
+	
+
+	<insert id="create" parameterType="Press" >
+		INSERT INTO SFT_PRESS
+		(
+		num
+		,title
+		,txusrnm
+		,reg_date
+		,content
+		)
+		VALUES
+		(
+		(SELECT (IFNULL(MAX(NUM),0)+1) FROM SFT_PRESS AS num )
+		,#{title,jdbcType=VARCHAR}
+		,#{txusrnm,jdbcType=VARCHAR}
+		,#{reg_date,jdbcType=VARCHAR}
+		,#{content,jdbcType=VARCHAR}
+		)
+	</insert>
+	
+	
+	<update id="update" parameterType="Press" >
+		UPDATE SFT_PRESS SET
+		title=#{title,jdbcType=VARCHAR},
+		txusrnm=#{txusrnm,jdbcType=VARCHAR},
+		reg_date=#{reg_date,jdbcType=VARCHAR},
+		content=#{content,jdbcType=VARCHAR}
+		WHERE
+		num = #{num,jdbcType=INTEGER}
+	</update>
+
+	<delete id="delete" parameterType="Press">
+		DELETE FROM SFT_PRESS 
+		WHERE 
+		num = #{num,jdbcType=INTEGER}
+	</delete>
+	
+	
+</mapper> 

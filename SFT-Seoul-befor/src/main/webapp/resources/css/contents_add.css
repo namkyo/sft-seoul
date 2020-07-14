@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+
+/**** 법률본문 css ****/
+.constart {margin:0;padding:0; letter-spacing:0; margin-bottom:80px; font-size:16px;}
+.constart li { font-family: 'NanumGothic','나눔고딕','dotum';  }
+.constart h3 { margin-top:30px; }
+.constart h5 { font-size:16px; }
+.constart ul, .constart ol {list-style:none;}
+.constart div, .constart p, .constart span, .constart li, .constart table td {word-break:break-all; line-height:28px;}
+
+
+.billdetail {background:#f8fafc; border:1px solid #e5e5e5; padding:20px !important; margin-top:10px; margin-bottom:10px;}
+.billdetail h5 {padding-top:5px;color:#222;font-size:16px;}
+
+.nsub_con {margin-top:0px;}
+.nsub_con li {padding:0 0 5px 0;}
+.sub_con {line-height:20px;}
+.sub_con li {padding:0 0 5px 15px;}
+.box_con{padding:20px 10px;border:1px solid #d9d9d9; padding-left:35px;}
+.box_con li {  list-style-type:disc; padding-left:0;}
+
+.mt15 {margin-top:15px!important;}
+.mt30 {margin-top:30px!important;}
+.ml15 {margin-left:15px!important;}
+.ml20 {margin-left:20px!important;}
+.ml10 {margin-left:10px!important;}
+
+.num_subcon{margin-top:10px;}
+.num_subcon li {padding-top:5px;}
+
+.bl_subtit_a1 {padding:0 0 0 0;color:#009aea;}
+.bl_subtit li {font-family: "맑은고딕","Malgun Gothic","돋움", "dotum", "verdana", sans-serif; font-weight:bold; }
+
+.bl_subtit {padding:0 0 10px 0;color:#009aea;font-size:16px;}
+.bl_sub_con {margin-top:6px;}
+.bl_sub_con2 {margin-top:6px; background:#eaf0f6; padding:20px; border:1px solid #e5e5e5;}
+.bl_sub_con li {padding:0 0 5px 10px;}
+.con_img{ width:100%;}
+.con_imgb{ width:80%; margin:30px 0 50px 0;}
+.img_script{ text-align:right; color:#929292;}
+@media screen and (min-width: 1024px) {
+.dotTitle:before{content:"";display:block;position:absolute;top:8px;left:0;width:4px;height:4px;background:#005BAC;border-radius:50%;}
+.constart h3 { }
+.con_img{ width:700px;}
+.con_imgb{ width:600px;}
+.constart { letter-spacing:0;}
+}
