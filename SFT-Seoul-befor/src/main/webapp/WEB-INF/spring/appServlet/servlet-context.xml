@@ -24,6 +24,12 @@
 	
 	<context:component-scan base-package="com.sft" />
 	
-	
+	<!-- 파일업로드경로
+	<beans:bean id="uploadPath" class="java.lang.String">
+	<beans:constructor-arg
+		value="C:\WorkSpace_Spring\login\src\main\webapp\resources\profileImage">
+
+	</beans:constructor-arg>
+	</beans:bean> -->
 	
 </beans:beans>
