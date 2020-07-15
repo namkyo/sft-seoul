@@ -18,7 +18,7 @@
     </div>
     <div class="talkbody">
         <div class="talk_iconset">
-            <a href="https://open.kakao.com/o/sOKpvDjc" target="_blank"class="btn">
+            <a href="https://open.kakao.com/o/sVtn6slc" target="_blank"class="btn">
                 <span class="ico ty1"></span>
                 <span class="stxt">투자문의</span>
             </a>
