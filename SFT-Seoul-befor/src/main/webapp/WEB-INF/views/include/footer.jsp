@@ -57,12 +57,12 @@
 			<ul class="depth1">
 			
 					<li><a href="/sft?page=AboutUs">SFT서울지사소개</a></li>
-					<li><a href="/sft?page=Introduction">이용약관</a></li>
+					<li><a href="/sft?page=Press">공지사항</a></li>
 					<li><a href="/sft?page=Howtouse">기간별수익</a></li>
 					<li><a href="/sft?page=Inverstment">이용방법</a></li>
-					<li><a href="/sft?page=Revenue">투자문의</a></li>
-					<li><a href="/sft?page=Press">회원소통방</a></li>
-					<li><a href="http://www.sft-network.cf?refid=ca001" target=”_blank”>사이트로가기</a></li>
+					<li><a onclick="btn_confirm('https://open.kakao.com/o/sVtn6slc');"   target=”_blank”>투자문의</a></li>
+					<li><a onclick="btn_confirm('https://open.kakao.com/o/gtTUp3Zb');"  target=”_blank”> 회원소통방</a></li>
+					<li><a onclick="btn_confirm('http://www.sft-network.cf?refid=ca001');" target=”_blank”>사이트로가기</a></li>
 		</ul>	
 			<a href="#" class="siteMapClose"><img src="/resources/images/common/closeB.png" alt="닫기" /></a>
 		</div>
@@ -77,16 +77,16 @@
 		<h1><img src="/resources/image/mainlogo.png" alt="" /></h1>
 	<ul class="mDepth1">
 					<li><a href="/sft?page=AboutUs">SFT서울지사소개</a></li>
-					<li><a href="/sft?page=Introduction">이용약관</a></li>
+					<li><a href="/sft?page=Press">공지사항</a></li>
 					<li><a href="/sft?page=Howtouse">기간별수익</a></li>
 					<li><a href="/sft?page=Inverstment">이용방법</a></li>
-					<li><a href="/sft?page=Revenue">투자문의</a></li>
-					<li><a href="/sft?page=Press">회원소통방</a></li>
-					<li><a href="http://www.sft-network.cf?refid=ca001" target=”_blank”>사이트로가기</a></li>
+					<li><a onclick="btn_confirm('https://open.kakao.com/o/sVtn6slc');"   target=”_blank”>투자문의</a></li>
+					<li><a onclick="btn_confirm('https://open.kakao.com/o/gtTUp3Zb');"  target=”_blank”> 회원소통방</a></li>
+					<li><a onclick="btn_confirm('http://www.sft-network.cf?refid=ca001');" target=”_blank”>사이트로가기</a></li>
 	</ul>
 
 	<ul class="mUtil">
-			<li><a href="/">서울지사</a></li>
+			<li><a href="/">SFT 서울지사</a></li>
 		</ul>
 		<a href="javascript:mGnbClose();" class="mGnbClose">모바일 메뉴 닫기</a>
 	</div>

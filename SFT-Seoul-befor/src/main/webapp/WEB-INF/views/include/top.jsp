@@ -48,6 +48,7 @@
 <script type="text/javascript" src="/resources/public/js/pop_cookie.js"></script>
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 
+
 <script type="text/javascript">
 /*
 	//오른쪽클릭방지
@@ -55,6 +56,15 @@
 		alert('우클릭 금지');
 		return false;
 	});*/
+	function btn_confirm(address){
+    	  /* confirm(문자열, 초기값) */
+    	  var check = confirm('페이지이동합니다....');
+    	  if(check) {
+    		window.open(address, '_blank'); 
+    	  }else {
+    		  return;
+    	  }
+    	}
 
 	//온로드
 	$(document).ready(

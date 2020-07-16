@@ -5,23 +5,26 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <c:import url="../include/top.jsp"></c:import>
 <c:import url="../include/nav.jsp"></c:import>
-<c:import url="../include/mainStart.jsp"></c:import>
+
+
 <script>
 	$(document).ready(function() {
 		$('#send').click(function() {
 			var clud_frm = $('#clud_frm');
 			clud_frm.submit();
 		});
+		
+		$('#content').summernote();
 	});
 </script>
 <div class="titleWrap"
 		style="background-color: #40bbe4; width: 100%; padding-top: 10px; padding-bottom: 10px; text-align: center;">
-		<h1 class="title" style="color: #fff;">SFT 회원소통방</h1>
+		<h1 class="title" style="color: #fff;">SFT 공지사항</h1>
 	</div>
  <div class="inner">
 
 	<form class="clud_frm" name="clud_frm"  id="clud_frm" method="post" action="/sft?page=Press_insert">
-        <h1 class="contTitle">SFT 회원소통방</h1>
+        <h1 class="contTitle">SFT 공지사항</h1>
         <div class="formWrap">
           <div class="sect">
             <h3>정보 입력</h3>
@@ -35,8 +38,6 @@
               </div>
               <div class="ipw_100">
                 <textarea rows="10" cols="20" id="content"  name="content"  placeholder="내용을 입력해 주세요."></textarea>
-              </div>
-              
             </div>
           </div>
           <div class="btnWrap"> 
@@ -48,6 +49,6 @@
 
 	</form>
 
-      </div></div>
+      </div>ㄴ
 
 <c:import url="../include/footer.jsp"></c:import>

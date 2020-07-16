@@ -5,7 +5,6 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <c:import url="../include/top.jsp"></c:import>
 <c:import url="../include/nav.jsp"></c:import>
-<c:import url="../include/mainStart.jsp"></c:import>
 <style>
 @media all and (max-width: 770px) {
 	.main_content img {

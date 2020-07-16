@@ -16,13 +16,13 @@
 				var str='<div class="quickMenus" style="font-family:font04; font-size:17px; text-align: center; line-height: 120%;">';
 				str += '<table><colgroup><col width="30%" /><col width="40%" /><col width="30%"/></colgroup><tr>';
 				str += '<td style="width:1024px; background-color: #6367cb;"><div> ';
-				str += '<a href="http://sft-network.cf?refid=서울지사" onfocus="this.blur()" rel="nofollow" style="text-decoration: none; color:#FFFFFF;" target="_blank" title="투자받기" style="color: #ffcc00;"><img src="/resources/image/mainlogo.png" style="width: 100px;"/><p>SFT</p><p>투자하기</p></a>';
+				str += '<a onclick="btn_confirm(\'http://sft-network.cf?refid=ca001\');"     onfocus="this.blur()" rel="nofollow" style="text-decoration: none; color:#FFFFFF;" target="_blank" title="투자받기" style="color: #ffcc00;"><img src="/resources/image/mainlogo.png" style="width: 100px;"/><p>SFT</p><p>투자하기</p></a>';
 				str += '</div></td>';
 				str += '<td style="background-color: #464749;"><div  > ';
 				str += '<a href="/sft?page=Inverstment" target="_blank"   onfocus="this.blur()" rel="nofollow" style="text-decoration: none; color:#FFFFFF;" title="이용방법" style="color: #ffcc00;"><img src="/resources/image/mainlogo.png" style="width: 100px;"/><p>SFT</p><p>이용방법</p></a>';
 				str += '</div></td>';
 				str += '<td style="background-color: #376891; height: 70px;"><div> ';
-				str += '<a href="https://open.kakao.com/o/sOKpvDjc" onfocus="this.blur()" rel="nofollow" style="text-decoration: none; color:#FFFFFF;" target="_blank" title="P2P 투자 상담" style="color: #ffcc00;"><img src="/resources/image/mainlogo.png" style="width: 100px;"/><p>P2P</p><p>투자문의</p></a>';
+				str += '<a onclick="btn_confirm(\'https://open.kakao.com/o/sOKpvDjc\');"  onfocus="this.blur()" rel="nofollow" style="text-decoration: none; color:#FFFFFF;" target="_blank" title="P2P 투자 상담" style="color: #ffcc00;"><img src="/resources/image/mainlogo.png" style="width: 100px;"/><p>P2P</p><p>투자문의</p></a>';
 				str += '</div></td>';
 				str += '</tr></div>';
 				$('#app_popup')[0].innerHTML = str;
@@ -31,13 +31,13 @@
 				var str='<div class="quickMenus" style="font-family:font04; font-size:17px; text-align: center; line-height: 120%;">';
 				str += '<table><colgroup><col width="30%" /><col width="40%" /><col width="30%"/></colgroup><tr>';
 				str += '<td style="width:1024px; background-color: #6367cb;"><div> ';
-				str += '<a href="http://sft-network.cf?refid=서울지사" onfocus="this.blur()" rel="nofollow" style="text-decoration: none; color:#FFFFFF;" target="_blank" title="투자받기" style="color: #ffcc00;"><img src="/resources/image/mainlogo.png" style="width: 100px;"/><p>SFT</p><p>투자하기</p></a>';
+				str += '<a onclick="btn_confirm(\'http://sft-network.cf?refid=ca001\');"  onfocus="this.blur()" rel="nofollow" style="text-decoration: none; color:#FFFFFF;" target="_blank" title="투자받기" style="color: #ffcc00;"><img src="/resources/image/mainlogo.png" style="width: 100px;"/><p>SFT</p><p>투자하기</p></a>';
 				str += '</div></td>';
 				str += '<td style="background-color: #464749;"><div  > ';
 				str += '<a href="/sft?page=Inverstment" target="_blank"   onfocus="this.blur()" rel="nofollow" style="text-decoration: none; color:#FFFFFF;" title="이용방법" style="color: #ffcc00;"><img src="/resources/image/mainlogo.png" style="width: 100px;"/><p>SFT</p><p>이용방법</p></a>';
 				str += '</div></td>';
 				str += '<td style="background-color: #376891; height: 70px;"><div> ';
-				str += '<a href="https://open.kakao.com/o/sOKpvDjc" onfocus="this.blur()" rel="nofollow" style="text-decoration: none; color:#FFFFFF;" target="_blank" title="P2P 투자 상담" style="color: #ffcc00;"><img src="/resources/image/mainlogo.png" style="width: 100px;"/><p>P2P</p><p>투자문의</p></a>';
+				str += '<a onclick="btn_confirm(\'https://open.kakao.com/o/sOKpvDjc\');" onfocus="this.blur()" rel="nofollow" style="text-decoration: none; color:#FFFFFF;" target="_blank" title="P2P 투자 상담" style="color: #ffcc00;"><img src="/resources/image/mainlogo.png" style="width: 100px;"/><p>P2P</p><p>투자문의</p></a>';
 				str += '</div></td>';
 				str += '</tr></div>';
 				$('#app_popup')[0].innerHTML = str;
@@ -55,6 +55,7 @@
 	<!-- <p class="subTitle" style="color: #fff;">동/영/상 가/이/드</p> -->
 </div>
 
+<!-- 
 <div class="quickMenu inner"  style="font-family: 'font02';">
 
 	<ul>
@@ -70,7 +71,7 @@
 
 	</ul>
 </div>
-
+ -->
 
  
 <div class="titleWrap inner" style="background-color: f3f3f5; width:100%; padding-top: 10px; padding-bottom: 10px; text-align: center;">
@@ -80,7 +81,7 @@
 
  <div class="quickMenu inner">
 	<ul>
-		<li><a href="https://blog.naver.com/PostList.nhn?blogId=wod865&categoryNo=7&skinType=&skinId=&from=menu&userSelectMenu=true" target="_blank"> <span></span>
+		<li><a onclick="btn_confirm('https://blog.naver.com/PostList.nhn?blogId=wod865&categoryNo=7&skinType=&skinId=&from=menu&userSelectMenu=true');"    target="_blank"> <span></span>
 				<div>
 					<h2>블로그</h2>
 				</div>
@@ -92,7 +93,7 @@
 				</div>
 		</a></li>
 		<li><a
-			href="https://www.facebook.com/SFT5123" target="_blank">
+			onclick="btn_confirm('https://www.facebook.com/SFT5123');"   target="_blank">
 				<span></span>
 				<div>
 					<h2>페이스북 </h2>
@@ -128,7 +129,7 @@
 		</div>
 		<div>
 			<a href="/sft?page=Press">
-				<h2>주요공지사항</h2>
+				<h2>공지사항</h2>
 				<p>주요 변경 사항이나 또는 긴급공지</p>
 				<p>, 기타 점검 사항을</p> 
 				<p>확인 하시려면 클릭하여 주시기 바랍니다.</p> 

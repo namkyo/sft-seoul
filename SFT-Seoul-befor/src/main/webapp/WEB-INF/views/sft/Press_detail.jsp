@@ -5,17 +5,15 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <c:import url="../include/top.jsp"></c:import>
 <c:import url="../include/nav.jsp"></c:import>
-<c:import url="../include/mainStart.jsp"></c:import>
-
 	<!--  로딩	
 <img src="https://tistory2.daumcdn.net/tistory/1898109/skin/images/Spinner.gif" class="bg_m"  style="left:42%; position:  absolute;" id="loding_bar">
  -->
 <div class="titleWrap"
 		style="background-color: #40bbe4; width: 100%; padding-top: 10px; padding-bottom: 10px; text-align: center;">
-		<h1 class="title" style="color: #fff;">SFT 회원소통방</h1>
+		<h1 class="title" style="color: #fff;">SFT 공지사항</h1>
 	</div>
 <div class="inner">
-	<h1 class="contTitle">SFT 회원소통방</h1>
+	<h1 class="contTitle">SFT 공지사항</h1>
 	<div class="sect boardDetail">
 		<div class="detailTit">
 			<div>

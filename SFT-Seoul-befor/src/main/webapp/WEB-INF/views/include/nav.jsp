@@ -22,12 +22,12 @@
 				<!-- <ul class="gDepth1"> -->
 				<ul>
 					<li><a href="/sft?page=AboutUs">SFT서울지사소개</a></li>
-					<li><a href="/sft?page=Introduction">이용약관</a></li>
+					<li><a href="/sft?page=Press">공지사항</a></li>
 					<li><a href="/sft?page=Howtouse">기간별수익</a></li>
-					<li><a href="/sft?page=Inverstment">이용방법</a></li>
-					<li><a href="/sft?page=Revenue">투자문의</a></li>
-					<li><a href="/sft?page=Press">회원소통방</a></li>
-					<li><a href="http://www.sft-network.cf?refid=ca001" target=”_blank”>사이트로가기</a></li>
+					<li><a href="/sft?page=Inverstment" >이용방법</a></li>
+					<li><a onclick="btn_confirm('https://open.kakao.com/o/sVtn6slc');"   target=”_blank”>투자문의</a></li>
+					<li><a onclick="btn_confirm('https://open.kakao.com/o/gtTUp3Zb');"  target=”_blank”> 회원소통방</a></li>
+					<li><a onclick="btn_confirm('http://www.sft-network.cf?refid=ca001');" target=”_blank”>사이트로가기</a></li>
 					
 				</ul>
 			</div>
